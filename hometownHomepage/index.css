@@ -1,0 +1,128 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+body {
+  font-family: Arial;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-section {
+  padding: 25px;
+  background: url(images/akwaibom.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  background: #1d3557;
+  margin: 120px 0 12px 0;
+  font-size: 32px;
+  padding: 4px 8px;
+}
+
+h2 {
+  background: #457b9d;
+  width: 355px;
+  font-size: 16px;
+  padding: 7px 18px;
+}
+
+h1,
+h2,
+h3 h4 {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  border-radius: 10px;
+}
+
+.activity-section {
+  margin: 0;
+  background: #f1faee;
+  padding: 25px;
+  color: #1d3557;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  margin-top: 50px;
+}
+.activity {
+  width: 220px;
+  border: 1px solid #1d3557;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.activity-title {
+  margin: 20px 0 12px 0;
+}
+
+.activity-title,
+p,
+h4 {
+  font-size: 16px;
+}
+
+.activity-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+p {
+  font-weight: 400;
+}
+
+.guide-section {
+  color: #1d3557;
+  background-color: #a8dadc;
+  width: 400px;
+  height: 294px;
+  margin: 50px auto;
+  border-bottom: 5px solid #1d3557;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+.guide-info {
+  margin-left: 8px;
+}
+
+.guide-title {
+  margin: 0 0 13px 0;
+}
+
+h4 {
+  margin-top: 24px;
+}

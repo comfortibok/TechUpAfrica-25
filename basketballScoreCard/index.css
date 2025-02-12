@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oxanium", serif;
+}
+
+.container {
+  background-color: #1c1c1c;
+  color: #ffd700;
+  text-align: center;
+  max-width: 575px;
+  margin: 80px auto 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.score {
+  font-family: "Cursed Timer ULiL", sans-serif;
+  background-color: #ffffff;
+  color: #f94f6d;
+  font-size: 90px;
+  font-weight: 400;
+  width: 155px;
+  height: 120px;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-score-btn {
+  width: 155px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  margin-top: 25px;
+  background-color: #1c1c1c;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+#reset-btn {
+  margin-top: 40px;
+  padding: 5px 10px;
+  width: 70px;
+}
+
+#winner {
+  font-size: 35px;
+  font-weight: 400px;
+}
