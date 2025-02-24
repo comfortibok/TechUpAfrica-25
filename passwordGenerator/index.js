@@ -104,7 +104,7 @@ function generatePassword(length = 15) {
     passwordOne += characters[randomIndexOne];
     passwordTwo += characters[randomIndexTwo];
   }
-
-  passwordOneEl.textContent = passwordOne;
-  passwordTwoEl.textContent = passwordTwo;
+  passwordOneEl.value = passwordOne;
+  passwordTwoEl.value = passwordTwo;
 }
+

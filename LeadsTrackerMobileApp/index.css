@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(26, 24, 24);
+}
+
+header {
+  width: 100%;
+  background-color: rgb(48, 216, 242);
+  color: rgb(31, 25, 25);
+  padding: 30px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1,
+label {
+  font-weight: 800;
+}
+
+main {
+  margin: 50px auto 0;
+}
+
+.section {
+  max-width:600px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+input {
+  margin-bottom: 15px;
+}
+
+label,
+li {
+  font-size: 1.5rem;
+}
+
+input {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid rgb(94, 87, 87);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 150px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: rgb(48, 216, 242);
+  color: rgb(26, 24, 24);
+}
+
+.del-button {
+  color: rgb(26, 24, 24);
+  background-color: rgb(251, 248, 248);
+  border: 2px solid rgb(48, 216, 242);
+}
+
+.list-section {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(26, 24, 24);
+}
+
+footer {
+  width: 400px;
+  margin: 30px auto 0;
+}
+
+footer > p {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block: 10px;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 760px){
+  .section{
+    width: 90%;
+  }
+}
