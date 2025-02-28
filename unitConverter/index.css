@@ -57,6 +57,9 @@ input {
 input:focus {
   outline: none;
 }
+input::placeholder {
+  color: #ffffff;
+}
 
 button {
   margin-top: 25px;
