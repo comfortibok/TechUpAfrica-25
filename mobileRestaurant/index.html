@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!--Inter Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,200&display=swap" rel="stylesheet">
+    <!-- Smythe Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="background-img">
+            <h1>Jimmy’s Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="main-sec">
+            <!-- Menu Items displayed -->
+        </section>
+
+        <section id="checkout-section">
+            <h2>Your order</h2>
+            <div id="itemOrder-section">
+                <!-- Ordered items displayed -->
+            </div>
+            <div class="total-price">
+                <!-- Total Price displayed and updated -->
+            </div>
+            <button id="order-btn">Complete order</button>
+        </section>
+
+<p id="message">
+</p>
+    </main>
+
+    <section class="modal" id="modal">
+        <h2>Enter card details</h2>
+        <form id="order-form">
+            <input type="text" name="fullName" placeholder="Enter your name" required />
+            <input type="text" name="cardNumber" placeholder="Enter card number" maxlength="16" required />
+            <input type="text" name="cvv" placeholder="Enter cvv" maxlength="3" required/>
+            <button type="submit">Pay</button>
+        </form>
+
+    </section>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
