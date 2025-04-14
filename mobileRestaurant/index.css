@@ -17,12 +17,14 @@ body {
 span,
 .modal h2,
 input::placeholder,
-.modal button, button {
+.modal button,
+button {
   font-family: Verdana;
 }
 
 .modal h2,
-.modal button, button {
+.modal button,
+button {
   font-weight: 700;
 }
 
@@ -139,7 +141,8 @@ section {
   font-size: 28px;
   text-align: center;
 }
-.item-order , .order{
+.item-order,
+.order {
   display: flex;
   align-items: center;
 }
@@ -210,7 +213,6 @@ button {
   padding: 20px;
   font-size: 20px;
 }
-
 
 /* Form elements */
 form {
