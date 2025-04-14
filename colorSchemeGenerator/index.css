@@ -121,9 +121,6 @@ button {
 }
 
 @media (max-width: 540px) {
-  body {
-    background-color: brown;
-  }
   form {
     padding: 0 0.5em;
   }
