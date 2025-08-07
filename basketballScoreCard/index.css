@@ -1,8 +1,15 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   font-family: "Oxanium", serif;
 }
+
+body{
+  width: 100%;
+}
+
 
 .container {
   background-color: #1c1c1c;

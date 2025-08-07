@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +18,11 @@ body {
 }
 
 main {
-  padding-block: 100px;
+  padding: 33px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main,
@@ -26,8 +32,8 @@ input {
 
 h1 {
   font-weight: 800;
-  font-size: 35px;
-  margin-bottom: 25px;
+  font-size: 2.188rem;
+  margin-block-end: 25px;
 }
 
 h1,
@@ -49,7 +55,7 @@ input {
   border: 2px solid #b295ff;
   border-radius: 5px;
   font-weight: 800;
-  font-size: 58px;
+  font-size: 3.625rem;
   padding: 5px 10px;
   text-align: center;
 }
@@ -85,28 +91,74 @@ button:hover {
 .conversion-section {
   background-color: #1f2937;
   color: #cdc2ff;
-  padding-block: 35px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 35px 0;
 }
 
 .unit-container {
+  width: 100%;
   background-color: #273549;
-  max-width: 650px;
-  margin: 35px auto;
   border-top-left-radius: 4.68px;
   padding: 35px;
+  margin-block-end: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .unit-container h2 {
   font-weight: 600;
-  font-size: 25px;
-  margin-bottom: 15px;
+  font-size: 1.56rem;
+  margin-block-end: 15px;
 }
 
 .unit-container p {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-block-end: 12px;
+  }
+
+  .unit-container h2 {
+    font-size: 1.2rem;
+    margin-block-end: 12px;
+  }
+
+  button {
+    font-size: 0.938rem;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    width: 70px;
+    height: 48px;
+    font-size: 1.5rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .conversion-section {
+    width: 85%;
+  }
+
+  .unit-container {
+    padding: 13px;
+  }
+  .unit-container:last-child {
+    margin-bottom: 0;
+  }
 }

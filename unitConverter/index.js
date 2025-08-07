@@ -65,5 +65,6 @@ convertBtn.addEventListener("click", function () {
     convertMass();
     let conversionSectionEl = document.querySelector(".conversion-section");
     conversionSectionEl.classList.remove("hidden");
+    inputEl.value=""
   }
 });

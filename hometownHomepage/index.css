@@ -7,36 +7,42 @@ LIGHT BLUE: #457B9D
 DARK BLUE: #1D3557
 
 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial;
-  margin: 0;
   color: #ffffff;
   text-align: center;
 }
 
 .hero-section {
   padding: 25px;
-  background: url(images/akwaibom.jpg);
+  background: url("images/akwaibom.jpg");
   background-size: cover;
   background-position: center;
-  height: 450px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 h1 {
   background: #1d3557;
-  margin: 120px 0 12px 0;
+  margin-bottom: 12px;
   font-size: 32px;
   padding: 4px 8px;
 }
 
 h2 {
   background: #457b9d;
-  width: 355px;
-  font-size: 16px;
+  max-width: 412px;
   padding: 7px 18px;
 }
 
@@ -52,28 +58,32 @@ h2 {
 }
 
 .activity-section {
-  margin: 0;
   background: #f1faee;
-  padding: 25px;
+  padding: 39px 34px;
   color: #1d3557;
   text-align: center;
 }
 
 h3 {
   font-size: 24px;
+  margin-block-end: 55px;
 }
 
 .activities {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  column-gap: 50px;
-  margin-top: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
+
 .activity {
-  width: 220px;
+  width: 250px;
   border: 1px solid #1d3557;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .activity-title {
@@ -81,6 +91,7 @@ h3 {
 }
 
 .activity-title,
+h2,
 p,
 h4 {
   font-size: 16px;
@@ -93,21 +104,26 @@ h4 {
 
 p {
   font-weight: 400;
+  line-height: 1.5;
+}
+
+.guide-data {
+  width: 100%;
+  padding-inline: 15px;
 }
 
 .guide-section {
   color: #1d3557;
   background-color: #a8dadc;
-  width: 400px;
-  height: 294px;
+  max-width: 400px;
   margin: 50px auto;
+  min-height: 294px;
   border-bottom: 5px solid #1d3557;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .avatar-img {
@@ -120,9 +136,25 @@ p {
 }
 
 .guide-title {
-  margin: 0 0 13px 0;
+  margin:26px 0 13px 0;
 }
 
-h4 {
-  margin-top: 24px;
+h4{
+  margin-top: 26px;
+}
+
+@media (max-width: 450px) {
+  .avatar-img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .guide-section {
+    max-width: 300px;
+    flex-direction: column;
+    gap: 13px;
+  }
 }
