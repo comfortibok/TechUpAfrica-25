@@ -136,22 +136,22 @@ p {
 }
 
 .guide-title {
-  margin:26px 0 13px 0;
+  margin: 26px 0 13px 0;
 }
 
-h4{
+h4 {
   margin-top: 26px;
 }
 
 @media (max-width: 450px) {
-  .avatar-img{
+  .avatar-img {
     display: block;
     margin: 0 auto;
     width: 150px;
     height: 150px;
     border-radius: 50%;
   }
-  
+
   .guide-section {
     max-width: 300px;
     flex-direction: column;
