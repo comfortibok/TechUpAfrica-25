@@ -124,7 +124,7 @@ function render() {
 }
 render();
 
-document.addEventListener("dblclick", function (e) {
+document.addEventListener("click", function (e) {
   const icon = e.target.closest("svg.like-icon");
   if (icon) {
     const postIndex = e.target.closest("svg.like-icon").dataset.index;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cee color scheme generator</title>
+    <title>color scheme generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,9 +15,9 @@
 
 <body>
     <main>
-        <form>
-            <input type="color" aria-label="color" id="color-picker">
-            <select name="" id="color-select">
+        <form aria-labelledby="color-form-title">
+            <input type="color" aria-label="Color picker" id="color-picker" value="#f55a5a">
+            <select name="" id="color-select" aria-label="Color scheme options">
                 <option value="monochrome">Monochrome</option>
                 <option value="monochrome-dark">Monochrome Dark</option>
                 <option value="monochrome-light">Monochrome Light</option>
@@ -28,37 +28,37 @@
                 <option value="analogic-complement">Analogic Complement</option>
                 <option value="triad">Triad</option>
             </select>
-            <button id="color-btn">Get color scheme</button>
+            <button id="color-btn" type="submit">Get color scheme</button>
         </form>
 
-        <section class="colors" id="color-section">
+        <section class="colors" id="color-section" aria-label="Generated color scheme">
             <div class="color-container">
-                <div class="color color-one"></div>
-                <p class="color-text">#F55A5A</p>
+                <div class="color color-one" aria-label="Color #F55A5A"></div>
+                <p class="color-text" aria-label="Color #F55A5A">#F55A5A</p>
             </div>
             </div>
 
             <div class="color-container">
-                <div class="color color-two"></div>
-                <p class="color-text">#2B283A</p>
+                <div class="color color-two" aria-label="Color #2B283A"></div>
+                <p class="color-text" aria-label="Color #2B283A">#2B283A</p>
             </div>
             </div>
 
             <div class="color-container">
-                <div class="color color-three"></div>
-                <p class="color-text">#FBF3AB</p>
+                <div class="color color-three" aria-label="Color #FBF3AB"></div>
+                <p class="color-text" aria-label="Color #FBF3AB">#FBF3AB</p>
             </div>
             </div>
 
             <div class="color-container">
-                <div class="color color-four"></div>
-                <p class="color-text">#AAD1B6</p>
+                <div class="color color-four" aria-label="Color #AAD1B6"></div>
+                <p class="color-text" aria-label="Color #AAD1B6">#AAD1B6</p>
             </div>
             </div>
 
             <div class="color-container">
-                <div class="color color-five"></div>
-                <p class="color-text">#A626D3</p>
+                <div class="color color-five" aria-label="Color #A626D3"></div>
+                <p class="color-text" aria-label="Color #A626D3">#A626D3</p>
             </div>
         </section>
     </main>

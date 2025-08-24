@@ -2,7 +2,7 @@ let colorSection = document.getElementById("color-section");
 const colorPicker = document.getElementById("color-picker");
 const colorSelect = document.getElementById("color-select");
 const colorBtn = document.getElementById("color-btn");
-colorBtn.addEventListener("click", function (e) {
+function displayColors(e) {
   e.preventDefault();
   const colorPickerValue = colorPicker.value.replace("#", "");
   const colorSelectValue = colorSelect.value;
@@ -38,4 +38,5 @@ colorBtn.addEventListener("click", function (e) {
         colorSection.appendChild(colorContainer);
       }
     });
-});
+}
+colorBtn.addEventListener("click", displayColors);
