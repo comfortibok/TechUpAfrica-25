@@ -14,3 +14,6 @@ A homepage for Akwa-Ibom, Nigeria, highlighting top activities and a local guide
 - Semantic HTML elements (header, section, article)
 - Descriptive alt text for all images
 - ARIA label and role for background image for improved screen reader support
+
+## Figma Design
+https://www.figma.com/design/2QuGfAOcHaZJ6aHXfuamnK/Hometown-Homepage?node-id=0-1

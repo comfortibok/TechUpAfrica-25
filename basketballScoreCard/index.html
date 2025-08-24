@@ -15,30 +15,30 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container" aria-labelledby="main-title">
         <div class="score-container">
-            <div>
-                <h2>HOME</h2>
-                <div class="score" id="home-score">0</div>
+            <section aria-labelledby="home-title">
+                <h2 id="home-title">HOME</h2>
+                <div class="score" id="home-score" aria-label="Home team score">0</div>
                 <div class="add-score-btn">
-                    <button onclick="add1PointToHome()">+1</button>
-                    <button onclick="add2PointToHome()">+2</button>
-                    <button onclick="add3PointToHome()">+3</button>
+                    <button onclick="add1PointToHome()" aria-label="Add 1 point to Home">+1</button>
+                    <button onclick="add2PointToHome()" aria-label="Add 2 points to Home">+2</button>
+                    <button onclick="add3PointToHome()" aria-label="Add 3 points to Home">+3</button>
                 </div>
-            </div>
-            <div>
-                <h2>GUEST</h2>
-                <div class="score" id="guest-score">0</div>
+            </section>
+            <section aria-labelledby="guest-title">
+                <h2 id="guest-title">GUEST</h2>
+                <div class="score" id="guest-score" aria-label="Guest team score">0</div>
                 <div class="add-score-btn">
-                    <button onclick="add1PointToGuest()">+1</button>
-                    <button onclick="add2PointToGuest()">+2</button>
-                    <button onclick="add3PointToGuest()">+3</button>
+                    <button onclick="add1PointToGuest()" aria-label="Add 1 point to Guest">+1</button>
+                    <button onclick="add2PointToGuest()" aria-label="Add 2 points to Guest">+2</button>
+                    <button onclick="add3PointToGuest()" aria-label="Add 3 points to Guest">+3</button>
                 </div>
-            </div>
+            </section>
         </div>
         <button id="reset-btn" onclick="resetScore()">Reset</button>
         <h3 id="winner"></h3>
-    </div>
+    </main>
     <script src="index.js"></script>
 </body>
 

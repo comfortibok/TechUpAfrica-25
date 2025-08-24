@@ -4,76 +4,199 @@
   margin: 0;
   padding: 0;
   font-family: "Oxanium", serif;
+  outline: none;
 }
 
-body{
+body {
+  padding: 0 10px;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.score,
+.add-score-btn {
   width: 100%;
 }
 
-
-.container {
-  background-color: #1c1c1c;
-  color: #ffd700;
-  text-align: center;
-  max-width: 575px;
-  margin: 80px auto 0;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.score-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.score,
+#winner,
+button {
+  font-weight: 400;
 }
 
 h2 {
+  color: rgba(238, 238, 238, 1);
   font-size: 40px;
   font-weight: 700;
-  margin: 0 0 20px 0;
+}
+
+#winner {
+  font-size: 35px;
+  margin-top: 15px;
+}
+
+.score,
+button {
+  border-radius: 5px;
+}
+
+.add-score-btn,
+#reset-btn {
+  height: 45px;
+}
+
+.score-container,
+.add-score-btn {
+  display: flex;
+}
+
+.score-container {
+  align-items: center;
+}
+
+.add-score-btn {
+  justify-content: center;
+}
+
+.container {
+  max-width: 575px;
+  margin: 80px auto;
+  background-color: rgba(27, 36, 74, 1);
+  color: rgba(154, 171, 216, 1);
+  border-radius: 10px;
+  padding: 50px 20px;
+}
+
+.score-container {
+  justify-content: space-around;
+}
+
+section {
+  width: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .score {
   font-family: "Cursed Timer ULiL", sans-serif;
-  background-color: #ffffff;
-  color: #f94f6d;
+  background-color: rgba(8, 0, 1, 1);
+  color: rgba(249, 79, 109, 1);
   font-size: 90px;
-  font-weight: 400;
-  width: 155px;
   height: 120px;
-  border-radius: 5px;
-  margin: 0 auto;
+  margin: 21px 0 26px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .add-score-btn {
-  width: 155px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  gap: 11px;
 }
 
 button {
-  margin-top: 25px;
   background-color: #1c1c1c;
-  color: #ffd700;
-  border: 2px solid #ffd700;
+  border: 1px solid rgba(154, 171, 216, 1);
+  background-color: transparent;
+  color: unset;
   width: 45px;
-  height: 45px;
-  border-radius: 5px;
+  height: 100%;
   font-size: 18px;
-  font-weight: 400;
 }
+
 #reset-btn {
+  display: block;
+  margin: 0 auto;
   margin-top: 40px;
-  padding: 5px 10px;
+  padding: 7px 12px;
   width: 70px;
 }
 
-#winner {
-  font-size: 35px;
-  font-weight: 400px;
+@media (max-width: 450px) {
+  .container {
+    margin: 60px auto;
+    padding: 30px 15px;
+  }
+
+  .score-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .score {
+    font-size: 55px;
+    height: 90px;
+  }
+
+  section {
+    width: 100px;
+  }
+
+  .add-score-btn {
+    height: 35px;
+    gap: 6px;
+  }
+
+  button {
+    font-size: 16px;
+    width: 30px;
+    height: 100%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  #reset-btn {
+    width: 50px;
+    padding: 4px 7px;
+  }
+
+  #winner {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 200px) {
+  .container {
+    margin: 50px auto;
+    padding: 30px 10px;
+  }
+
+   section {
+    width: 90px;
+  }
+
+  .score {
+    font-size: 40px;
+    height: 60px;
+  }
+
+  .add-score-btn {
+    height: 25px;
+    gap: 4px;
+  }
+
+  button {
+    font-size: 12px;
+    width: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #reset-btn {
+    width: 40px;
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+
+  #winner {
+    font-size: 16px;
+  }
 }

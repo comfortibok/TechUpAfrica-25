@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>password generator</title>
+  <title>Password Generator</title>
   <!-- Karla -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,18 +21,18 @@
 </head>
 
 <body>
-  <div class="main">
-
-    <div class="title"><h1>Generate a </h1><span>random password</span></div>
-    
-    <p>Never use an insecure password again.</p>
-    <button onclick="generatePassword()">Generate passwords</button>
+  <main class="main" aria-labelledby="main-title">
+    <header>
+      <h1 id="main-title">Generate a</h1> <span>random password</span>
+    </header>
+    <p id="desc">Never use an insecure password again.</p>
+    <button onclick="generatePassword()" aria-describedby="desc">Generate passwords</button>
     <hr />
-    <div class="container">
-      <div class="input" id="password-one"></div>
-      <div class="input" id="password-two"></div>
-    </div>
-  </div>
+    <section class="container" aria-label="Generated passwords">
+      <div class="input" id="password-one" aria-label="First generated password"></div>
+      <div class="input" id="password-two" aria-label="Second generated password"></div>
+    </section>
+  </main>
   <script src="index.js"></script>
 </body>
 

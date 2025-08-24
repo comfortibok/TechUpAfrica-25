@@ -16,14 +16,14 @@
 
 <body>
   <div class="converter-container">
-    <main>
-      <h1>Metric/Imperial Unit Conversion</h1>
-      <div class="container">
-        <input id="input-el" placeholder="0"/>
-        <button id="convert-btn">Convert</button>
-      </div>
+    <main aria-labelledby="main-title">
+      <h1 id="main-title">Metric/Imperial Unit Conversion</h1>
+      <form class="container" aria-label="Unit input form">
+     <input id="input-el" name="unit-value" type="number" placeholder="0" aria-label="Value to convert" required />
+        <button id="convert-btn" type="submit">Convert</button>
+      </form>
     </main>
-    <section class="conversion-section hidden">
+    <section class="conversion-section hidden" aria-label="Conversion results">
       <div class="unit-container">
         <h2>Length (Meter/Feet)</h2>
         <p>
@@ -38,7 +38,7 @@
           <span id="convert-liters-el">20 gallons = 75.708 liters</span>
         </p>
       </div>
-      <div class="unit-container" class="mass-container">
+      <div class="unit-container mass-container">
         <h2>Mass (Kilograms/Pounds)</h2>
         <p>
           <span id="convert-pounds-el">20 kilos = 44.092 pounds</span> |
@@ -47,6 +47,7 @@
       </div>
     </section>
   </div>
+
   <script src="index.js"></script>
 </body>
 
