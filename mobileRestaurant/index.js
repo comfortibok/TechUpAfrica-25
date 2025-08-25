@@ -9,11 +9,11 @@ const orderForm = document.getElementById("order-form");
 const message = document.getElementById("message");
 
 let totalPrice = 0;
+let orderItems = {};
 
 function renderMenu(menuArr = menuArray) {
   return menuArr
-    .map((menu) => {
-      const { name, id, ingredients, price, emoji } = menu;
+    .map(({ name, id, ingredients, price, emoji }) => {
       return `<div class="menu-section" id="${id}">
           <div class="menu-emoji">${emoji}</div>
           <div class="menu-item">
@@ -29,7 +29,6 @@ function renderMenu(menuArr = menuArray) {
 
 mainSec.innerHTML = renderMenu(menuArray);
 
-// Add menu item to ordered menu list
 mainSec.addEventListener("click", function (e) {
   if (e.target.dataset.id) {
     handleAddMenu(e.target.dataset.id);
@@ -38,21 +37,18 @@ mainSec.addEventListener("click", function (e) {
 
 function handleAddMenu(menuId) {
   const menuItem = menuArray.find((menu) => String(menu.id) === menuId);
-  if (!document.getElementById(`order-${menuItem.id}`)) {
-    itemOrderSection.innerHTML += `<div class="item-order" id="order-${menuItem.id}">
-               <div class="order">
-                  <h3>${menuItem.name}</h3>
-                  <span class="remove-btn" data-id="${menuItem.id}">remove</span>
-              </div>
-              <h3>$${menuItem.price}</h3>
-          </div>`;
-    checkOutSection.style.display = "flex";
-    totalPrice += menuItem.price;
-    updateTotalPrice();
+  if (!menuItem) return;
+
+  if (orderItems[menuId]) {
+    orderItems[menuId].quantity++;
+  } else {
+    orderItems[menuId] = { ...menuItem, quantity: 1 };
   }
+
+  totalPrice += menuItem.price;
+  renderOrder();
 }
 
-// Remove menu item from menu list
 checkOutSection.addEventListener("click", function (e) {
   if (e.target.classList.contains("remove-btn")) {
     removeMenuItem(e.target.dataset.id);
@@ -60,27 +56,47 @@ checkOutSection.addEventListener("click", function (e) {
 });
 
 function removeMenuItem(menuId) {
-  const menuItem = menuArray.find((menu) => String(menu.id) === menuId);
-  if (!menuItem) return;
+  if (!orderItems[menuId]) return;
 
-  const orderItem = document.getElementById(`order-${menuId}`);
-  if (orderItem) {
-    orderItem.remove();
-    totalPrice -= menuItem.price;
-    updateTotalPrice();
+  orderItems[menuId].quantity--;
+  totalPrice -= orderItems[menuId].price;
+
+  if (orderItems[menuId].quantity <= 0) {
+    delete orderItems[menuId];
   }
 
-  if (itemOrderSection.children.length === 0) {
+  renderOrder();
+}
+
+function renderOrder() {
+  itemOrderSection.innerHTML = "";
+
+  Object.values(orderItems).forEach((item) => {
+    itemOrderSection.innerHTML += `
+      <div class="item-order" id="order-${item.id}">
+        <div class="order">
+          <h3>${item.name} (${item.quantity})</h3>
+          <span class="remove-btn" data-id="${item.id}">remove</span>
+        </div>
+        <h3>$${item.price * item.quantity}</h3>
+      </div>
+    `;
+  });
+
+  if (Object.keys(orderItems).length === 0) {
+    checkOutSection.style.display = "none";
     totalPrice = 0;
-    updateTotalPrice();
+  } else {
+    checkOutSection.style.display = "flex";
   }
+
+  updateTotalPrice();
 }
 
 function updateTotalPrice() {
-  totalPriceElement.innerHTML = `<h3>Total:</h3> <h3>$${totalPrice}</h3>`;
+  totalPriceElement.innerHTML = `<h3>Total price:</h3> <h3>$${totalPrice}</h3>`;
 }
 
-// Display the modal
 document.addEventListener("click", function (e) {
   if (e.target.id === "order-btn") {
     modal.style.display = "block";
@@ -111,19 +127,15 @@ orderForm.addEventListener("submit", function (e) {
     return;
   }
 
-  // Hide checkout section and modal
   checkOutSection.style.display = "none";
   modal.style.display = "none";
 
-  // Show success message
   message.textContent = `Thanks, ${fullNameData}! Your order is on its way!`;
   message.style.display = "block";
 
-  // Clear order items
   itemOrderSection.innerHTML = "";
   totalPrice = 0;
   updateTotalPrice();
 
-  // Reset form fields
   orderForm.reset();
 });

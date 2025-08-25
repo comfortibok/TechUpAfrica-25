@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>leads tracker app</title>
+    <title>Leads Tracker</title>
 </head>
 
 <body>
@@ -23,27 +23,25 @@
         <h1>LEADS TRACKER</h1>
     </header>
     <main>
-        <section>
-            <div class="section"><label for="input-el">Enter URL:</label>
-                <input type="text" id="input-el" placeholder="https://facebook.com" />
-                <div class="button-container"><button class="add-button" id="add-btn">ADD</button>
-                    <button class="del-button" id="del-btn">DELETE ALL</button>
-                </div>
+        <form aria-label="Add a new lead URL" autocomplete="off">
+            <label for="input-el">Enter URL:</label>
+            <input type="text" id="input-el" placeholder="https://facebook.com" aria-required="true" required
+                aria-describedby="input-desc" />
+            <div class="button-container">
+                <button class="add-button" id="add-btn" type="submit">ADD</button>
+                <button class="del-button" id="del-btn" type="button">DELETE ALL</button>
             </div>
-        </section>
+        </form>
 
-        <section>
-            <div class="section list-section" id="list-section">
-                <ul id="ul-el">
-                </ul>
-            </div>
-
+        <section class="list-section" id="list-section">
+            <ul id="ul-el">
+            </ul>
         </section>
     </main>
     <footer>
         <div class="social-links">
-            <a href="https://github.com/comfortibok/TechUpAfrica-25" target="_blank"><i class="fa-brands fa-github"
-                style="color: #74c0fc"></i></a>
+            <a href="https://github.com/comfortibok" target="_blank" aria-label="Comfort Ibok on GitHub"><i
+                    class="fa-brands fa-github" style="color: #74c0fc"></i></a>
             <a href="https://www.instagram.com/com4t_ibok/" target="_blank"><i class="fa-brands fa-instagram"
                     style="color: #74c0fc"></i></a>
             <a href="https://www.linkedin.com/in/comfort-ibok-a43042164" target="_blank"><i

@@ -15,22 +15,24 @@ const fireBaseConfig = {
 const app = initializeApp(fireBaseConfig);
 const database = getDatabase(app);
 const referenceInDB = ref(database, "links");
+
 const inputEl = document.getElementById("input-el");
 const listSec = document.getElementById("list-section");
 const ulEl = document.getElementById("ul-el");
 const addBtn = document.getElementById("add-btn");
 const delBtn = document.getElementById("del-btn");
+const form = document.querySelector("form");
 
 function track(links) {
   let listItems = "";
   for (let i = 0; i < links.length; i++) {
     listItems += `
-            <li>
-                <a target='_blank' href='${links[i]}'>
-                    ${links[i]}
-                </a>
-            </li>
-        `;
+      <li>
+        <a target="_blank" href="${links[i]}">
+          ${links[i]}
+        </a>
+      </li>
+    `;
   }
   listSec.classList.remove("list-section");
   listSec.classList.add("section");
@@ -38,16 +40,16 @@ function track(links) {
 }
 
 onValue(referenceInDB, function (snapshot) {
-  const snapshotDoesExist = snapshot.exists();
-  if (snapshotDoesExist) {
+  if (snapshot.exists()) {
     const snapshotValues = snapshot.val();
     const links = Object.values(snapshotValues);
     track(links);
   }
 });
 
-addBtn.addEventListener("click", function () {
-  let inputElValue = inputEl.value;
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let inputElValue = inputEl.value.trim();
   push(referenceInDB, inputElValue);
   inputEl.value = "";
 });
