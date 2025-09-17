@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: rgba(245, 247, 251, 1);
+  color: rgb(41, 50, 100);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#root::before,
+#root::after {
+  position: absolute;
+  content: "";
+  width: 297px;
+  height: 235px;
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1; 
+}
+
+#root::before {
+  background: url("/public/blob5(1).svg") no-repeat right top;
+  top: 0;
+  right: 0;
+}
+
+#root::after {
+  background: url("/public/blob5.svg") no-repeat left bottom;
+  bottom: 0;
+  left: 0;
+}
+
+.home-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.home-section h1 {
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 1.95rem;
+}
+
+.home-section p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1rem;
+  margin-block: 7px 29px;
+}
+
+button {
+  width: 193px;
+  padding: 16px 28px;
+  background-color: rgba(77, 91, 158, 1);
+  color: rgba(245, 247, 251, 1);
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.quiz-section {
+  max-width: 900px;
+  margin: 40px auto 35px;
+  padding: 0 10px;
+}
+
+.question {
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 15px;
+  border-block-end: 0.79px solid rgba(219, 222, 240, 1);
+}
+
+.question:last-child {
+  margin-bottom: 0;
+}
+
+.question p {
+  font-family: " Karla";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 1rem;
+}
+
+.options-section {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.options-section button {
+  width: 87px;
+  padding: 4px 19px;
+  border: 1px solid rgba(41, 50, 100, 1);
+  background-color: transparent;
+  border-radius: 8px;
+  color: unset;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 0.64rem;
+  text-align: center;
+  margin-top: 12px;
+}
+.answer-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.secondary-btn {
+  width: 120px;
+  padding: 11px 22px;
+  font-size: 0.64rem;
+  font-family: "Inter";
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.result-section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 13px;
+}
+
+.result-section h2 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  #root::before,
+  #root::after {
+    width: 200px;
+    height: 160px;
+  }
+
+  .quiz-section {
+    padding: 0 15px;
+  }
+
+  button {
+    width: 160px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #root::before,
+  #root::after {
+    width: 140px;
+    height: 110px;
+  }
+
+  .home-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-section p {
+    font-size: 0.9rem;
+    margin-block: 5px 20px;
+  }
+
+  button {
+    width: 140px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .quiz-section {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .options-section {
+    gap: 10px;
+  }
+
+  .options-section button {
+    width: auto;
+    flex: 1 1 45%;
+    font-size: 0.7rem;
+  }
+
+  .secondary-btn {
+    width: 100px;
+    padding: 9px 14px;
+    font-size: 0.7rem;
+  }
+
+  .result-section {
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 320px) {
+    #root::before,
+  #root::after {
+    width: 100px;
+    height: 70px;
+  }
+
+  .home-section {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .home-section h1 {
+    font-size: 1.1rem;
+  }
+
+  .home-section p {
+    font-size: 0.7rem;
+    margin-block: 4px 12px;
+  }
+
+  button,
+  .secondary-btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.7rem;
+  }
+
+  .options-section {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .options-section button {
+    flex: 1 1 100%;
+    font-size: 0.65rem;
+  }
+
+  .result-section h2 {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+
