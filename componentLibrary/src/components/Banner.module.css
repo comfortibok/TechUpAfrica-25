@@ -1,0 +1,63 @@
+.bannerContainer {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.bannerContent {
+  line-height: 1.6;
+}
+
+.bannerContent > div {
+  max-width: 896px;
+  margin: 0 auto 35px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  border-radius: 6px;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+h2,
+p {
+  font-size: 0.875rem;
+}
+
+h2 {
+  font-weight: 500;
+  margin-block-end: 8px;
+}
+
+p {
+  font-weight: 400;
+}
+
+@media (max-width: 300px) {
+  img {
+    width: 17px;
+    height: 17px;
+  }
+
+  .bannerContent > div {
+    margin-block-end: 20px;
+    padding: 8px;
+    gap: 9px;
+  }
+}
+
+@media (min-width: 600px) {
+  h2,
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  h2,
+  p {
+    font-size: 1.125rem;
+  }
+}

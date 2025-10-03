@@ -1,0 +1,110 @@
+.tooltipContainer {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 44px;
+}
+
+.tooltip {
+  position: relative;
+  max-width: 384px;
+  padding: 16px;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  bottom: -11px;
+  left: 30px;
+  width: 34px;
+  height: 19px;
+  -webkit-mask: url("/src/assets/polygon.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url("/src/assets/polygon.svg") no-repeat center;
+  mask-size: contain;
+  background: inherit;
+  z-index: 1;
+}
+
+.tooltipBtnWrap {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.tooltipIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.tooltipContent {
+  position: relative;
+}
+
+.tooltipBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  margin-inline-start: 12px;
+  margin-block-end: 5px;
+}
+
+.tooltipContent h2,
+.tooltipContent p {
+  font-size: 0.875rem;
+}
+
+.tooltipContent h2 {
+  font-weight: 500;
+  margin-block-end: 5px;
+}
+
+.tooltipContent p {
+  font-weight: 400;
+}
+
+@media (max-width: 300px) {
+  .tooltipContainer {
+    gap: 36px;
+  }
+  .tooltip {
+    padding: 14px 8px;
+    gap: 8px;
+  }
+
+  .tooltipBtn {
+    margin-inline-start: 6px;
+  }
+
+  .tooltipIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tooltipContainer {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .tooltip {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .tooltipContent h2,
+  .tooltipContent p {
+    font-size: 1rem;
+  }
+}

@@ -4,48 +4,48 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
+  border: 4px solid red;
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
     sans-serif;
   font-weight: 800;
 }
 
-.blackJack-container {
+.blackJack-app {
+  border: 4px solid blue;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
-.blackJack-img {
+.blackJack-app::before {
   position: absolute;
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  bottom: 0;
-  right: 0;
+  background: url("images/table.png") no-repeat center center/cover;
   z-index: -1;
 }
 
-.blackJack-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-section {
-  width: 600px;
-  margin: 0 auto;
+.blackJack-container {
+  border: 4px solid yellow;
   text-align: center;
-  background-color: transparent;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
   padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   margin-bottom: 30px;
 }
 
@@ -59,7 +59,8 @@ h1,
 }
 
 p {
-  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
@@ -67,13 +68,55 @@ p {
   text-shadow: 2px 2px 2px rgba(206, 89, 55, 0);
 }
 
+.buttons {
+  border: 4px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
 button {
   color: #016f32;
-  font-size: 20px;
-  width: 150px;
+  font-size: 1rem;
+  flex: 1;
   background-color: goldenrod;
-  padding: 10px 0;
+  padding:  10px;
   border: none;
-  border-radius: 5px;
-  margin: 10px 10px 25px 0;
+  border-radius: 5px;text-transform: capitalize;
+}
+
+@media (max-width: 925px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  button {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 250px) {
+  h1 {
+    font-size: 1.85rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .buttons {
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,78 @@
+.cardsContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cardContent {
+  color: rgba(107, 114, 128, 1);
+  background-color: rgba(249, 250, 251, 1);
+  max-width: 384px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: all 250ms ease-in-out;
+}
+
+.cardContent:hover {
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.cardContentImg {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  background-color: rgba(63, 117, 254, 1);
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.cardContent h2 {
+  color: rgba(17, 24, 39, 1);
+  margin-block-end: 32px;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.cardContent p {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 300px) {
+  .cardContentImg {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .cardContent {
+    padding: 40px 10px 20px;
+  }
+
+  .cardContent h2 {
+    font-size: 1rem;
+  }
+
+  .cardContent p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .cardContent h2 {
+    font-size: 1.25rem;
+  }
+
+  .cardContent p {
+    font-size: 1.125rem;
+  }
+}
