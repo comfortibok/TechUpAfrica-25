@@ -88,7 +88,7 @@ button {
   border-radius: 5px;text-transform: capitalize;
 }
 
-@media (max-width: 925px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 2.7rem;
   }

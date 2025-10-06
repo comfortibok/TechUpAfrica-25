@@ -70,7 +70,7 @@ export default function Tooltip() {
 
   return (
     <section>
-      <h1>Tooltip Component</h1>
+      <h1>Tooltip</h1>
       <div className={styles.tooltipContainer}>
         {tooltips.map((tooltip) => (
           <div

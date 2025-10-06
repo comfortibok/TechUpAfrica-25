@@ -93,7 +93,6 @@
 
 @media (max-width: 600px) {
   .tooltipContainer {
-    width: 100%;
     grid-template-columns: 1fr;
   }
 

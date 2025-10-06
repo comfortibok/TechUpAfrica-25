@@ -3,7 +3,7 @@ import styles from "../components/Cards.module.css";
 export default function Cardsp() {
   return (
     <section>
-      <h1>Cards Component</h1>
+      <h1>Cards</h1>
       <div className={styles.cardsContainer}>
         <div className={styles.cardContent}>
           <svg
