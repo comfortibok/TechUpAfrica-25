@@ -1,62 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: rgba(35, 37, 44, 1);
-  color: rgba(74, 78, 116, 1);
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 0.64rem;
-  padding-inline: 10px;
-}
-
-img {
-  width: 100%;
-  height: 317px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin-block-end: 1.25em;
-}
-
-h1,
-h3 {
-  color: rgba(43, 40, 58, 1);
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 1.56rem;
-}
-
-h2 {
-  font-size: 0.8rem;
-  color: rgba(244, 125, 39, 1);
-  margin-block-end: 8.8px;
-}
-
-h3 {
-  font-size: 1rem;
-  margin-block-end: 5px;
-}
-
-.desc {
-  margin-block-end: 1.6875em;
-}
-
-section p {
-  line-height: 1.5;
-}
-
-header {
-  text-align: center;
-}
-
 main {
   background-color: rgba(245, 245, 245, 1);
   max-width: 317px;
@@ -66,31 +7,7 @@ main {
 }
 
 section {
-  margin-block: 1.56em 3.625em;
-  padding-inline: 2.19em;
-}
-
-.button-wrap {
-  width: 100%;
-  margin-block-start: 1.7em;
-  padding-inline: 2.19em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.button-wrap a {
-  flex: 1;
-  min-height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  text-decoration: none;
+  margin: 2.46em 3.45em 3.05em;
 }
 
 footer {
@@ -104,101 +21,36 @@ footer {
   border-bottom-right-radius: 10px;
 }
 
-.footer-icon {
-  width: 25px;
-  height: 25px;
-}
-
 @media (max-width: 250px) {
-  .button-wrap {
-    flex-direction: column;
+  main {
+    max-width: 100%;
   }
 
-  .button-wrap a {
-    width: 100%;
+  section {
+    margin:2em 2em 2.5em;
   }
 
   footer {
     gap: 10px;
   }
-
-  .footer-icon {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 @media (min-width: 600px) {
   main {
-    max-width: 600px;
+    max-width: 580px;
     min-height: 500px;
     margin: 3em auto;
-    padding: 2em;
-  }
-
-  .button-wrap {
-    padding-inline: 3em;
-    gap: 20px;
-  }
-
-  .footer-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p,
-  .button-wrap a {
-    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 1025px) {
-  img {
-    object-fit: contain;
-  }
-
   main {
-    max-width: 850px;
+    max-width: 800px;
     min-height: 600px;
-    margin: 4em auto;
-    padding: 3em;
+    margin: 3.7em auto;
   }
-
-  .button-wrap {
-    padding-inline: 4em;
-    gap: 25px;
-  }
-
-  .button-wrap a {
-    min-height: 42px;
-  }
-
-  .footer-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
+  
+section {
+  margin: 2.46em 4em 3.05em;
+}
 }

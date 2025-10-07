@@ -1,0 +1,9 @@
+.interestDetails {
+  margin-block-start: 2.65em;
+}
+
+@media (max-width: 250px) {
+  .interestDetails {
+    margin-block-start: 1.5em;
+  }
+}

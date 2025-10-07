@@ -1,0 +1,81 @@
+.headerWeb {
+  margin-block-end: 1.7em;
+  text-align: center;
+}
+
+.buttonWrap {
+  width: 100%;
+  padding-inline: 3.45em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.emailBtn,
+.linkedInBtn {
+  text-align: center;
+  flex: 1;
+  border-radius: 6px;
+  padding: 0.65em 1.98em;
+}
+
+.emailBtn {
+  border: 1px solid rgba(209, 213, 219, 1);
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(55, 65, 81, 1);
+}
+
+.linkedInBtn {
+  border: none;
+  background-color: rgba(41, 127, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 4px;
+}
+
+.btnIcon {
+  margin-inline-end: 0.25em;
+}
+
+@media (max-width: 250px) {
+  .buttonWrap {
+    padding-inline: 2em;
+  }
+
+  .emailBtn,
+  .linkedInBtn {
+    padding: 0.65em 1em;
+  }
+}
+
+@media (max-width: 599px) {
+  .buttonWrap {
+    flex-direction: column;
+  }
+
+  .emailBtn,
+  .linkedInBtn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .buttonWrap {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .buttonWrap {
+    width: 600px;
+    margin: auto;
+    padding-inline: 4em;
+    gap: 25px;
+  }
+
+  .emailBtn,
+  .linkedInBtn {
+    padding-block: 0.8em;
+  }
+}
