@@ -1,0 +1,145 @@
+.withPicContainer {
+  width: 90%;
+  padding: 96px 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.withPicContainer img {
+  position: absolute;
+  z-index: 1;
+  left: 39px;
+  top: 82px;
+  width: 36%;
+  height: 464px;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.withPicContent {
+  background-color: rgba(37, 69, 184, 1);
+  padding: 80px 71px;
+}
+
+svg,
+.withPicInfo p {
+  margin-block-end: 24px;
+}
+
+.withPicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: auto;
+  max-width: 60%;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.withPicInfo p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.withPicInfo strong {
+  margin-block-end: 6px;
+}
+
+@media (min-width: 1076px) and (max-width: 1247px) {
+  .withPicContainer img {
+    left: 25px;
+    top: 70px;
+  }
+  .withPicInfo p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 709px) and (max-width: 1075px) {
+  .withPicContent {
+    padding: 60px 25px;
+  }
+
+  .withPicContainer img {
+    width: 36%;
+    height: 400px;
+    top: 68px;
+    left: 20px;
+  }
+
+  .withPicInfo {
+    width: 65%;
+  }
+
+  .withPicInfo p {
+    font-size: 1.13rem;
+  }
+
+  svg,
+  .withPicInfo p {
+    margin-block-end: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .withPicContent {
+    padding: 55px 25px;
+  }
+
+  .withPicContainer img {
+    width: 37%;
+    height: 420px;
+    left: 15px;
+  }
+
+  .withPicInfo p {
+    font-size: 1.13rem;
+  }
+
+  svg,
+  .withPicInfo p {
+    margin-block-end: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .withPicContainer {
+    padding: 96px 0 0;
+  }
+
+  .withPicContent {
+    padding: 64px 5px;
+  }
+
+  .withPicContainer img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 206px;
+  }
+
+  .withPicInfo {
+    max-width: 100%;
+    margin: 48px 0 0;
+  }
+}
+
+@media (max-width: 468px) {
+  .withPicInfo {
+    font-size: 0.875rem;
+  }
+
+  .withPicInfo p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 250px) {
+  .withPicInfo {
+    font-size: 0.75rem;
+  }
+
+  .withPicInfo p {
+    font-size: 1rem;
+  }
+}

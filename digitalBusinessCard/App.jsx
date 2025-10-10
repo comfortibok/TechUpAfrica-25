@@ -7,10 +7,10 @@ function App() {
   return (
     <main>
       <Info />
-      <section>
+      <article>
         <About />
         <Interest />
-      </section>
+      </article>
       <Footer />
     </main>
   );
