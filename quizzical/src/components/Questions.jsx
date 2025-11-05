@@ -1,3 +1,4 @@
+import styles from "../components/Questions.module.css"
 import Option from "./OPtion";
 
 export default function Questions({
@@ -8,9 +9,9 @@ export default function Questions({
   onSelect,
 }) {
   return (
-    <div className="question">
+    <div className={styles.question}>
       <p dangerouslySetInnerHTML={{ __html: question }} />
-      <div className="options-section">
+      <div className={styles.optionsSection}>
         {options.map((option, i) => (
           <Option
             key={i}

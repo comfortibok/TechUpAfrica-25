@@ -1,0 +1,32 @@
+.option {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid rgba(41, 50, 100, 1);
+  background-color: transparent;
+  border-radius: 8px;
+  color: unset;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 0.64rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 350px) {
+  .option {
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .option {
+    padding: 7px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .option {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+}

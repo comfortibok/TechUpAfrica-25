@@ -1,0 +1,79 @@
+.homeSection {
+  border: 4px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 1.95rem;
+}
+
+.homeSection p {
+  font-family: "Inter";
+  font-weight: 400;
+  margin-block: 7px 29px;
+}
+
+.homeSection button {
+  width: 193px;
+  padding: 16px 28px;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 250px) {
+  .homeSection button {
+    width: 130px;
+    padding: 12px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .homeSection button {
+    padding: 14px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .optionsSection,
+  .resultSection {
+    gap: 15px;
+  }
+
+  .homeSection button {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    font-size: 2.125rem;
+  }
+
+  .optionsSection,
+  .resultSection {
+    gap: 17px;
+  }
+
+  .homeSection button {
+    font-size: 1.25rem;
+  }
+}

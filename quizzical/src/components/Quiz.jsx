@@ -6,8 +6,8 @@ export default function Quiz({ questions, userAnswers, onSelect, onSubmit }) {
     Object.keys(userAnswers).length === questions.length;
 
   return (
-    <section className="quiz-section">
-      { questions.map((q) => (
+    <section className="quizSection">
+      {questions.map((q) => (
         <Questions
           key={q.id}
           id={q.id}
@@ -18,7 +18,11 @@ export default function Quiz({ questions, userAnswers, onSelect, onSubmit }) {
         />
       ))}
 
-      <button className="secondary-btn answer-btn" onClick={onSubmit} disabled={!allAnswered}>
+      <button
+        className="secondaryBtn answerBtn"
+        onClick={onSubmit}
+        disabled={!allAnswered}
+      >
         Check answers
       </button>
     </section>

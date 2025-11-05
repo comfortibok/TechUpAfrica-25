@@ -1,202 +1,170 @@
+/* Global Reset and Base Styles */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  font-family: "Oxanium", serif;
-  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-  padding: 0 10px;
+  font-family: Verdana, sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #0d1323;
+  color: #eee;
 }
 
-h2,
-h3 {
+/* Main App Wrapper */
+.appWrapper {
+  border: 3px solid rgba(249, 79, 109, 1);
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(27, 36, 74, 1);
+  color: #eeeeee;
+  padding: 2.5rem 3rem;
+  border-radius: 10px;
   text-align: center;
 }
 
-.score,
-.add-score-btn {
-  width: 100%;
-}
-
-.score,
-#winner,
-button {
-  font-weight: 400;
-}
-
-h2 {
-  color: rgba(238, 238, 238, 1);
-  font-size: 40px;
+/* Headings */
+h1,
+h3 {
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-#winner {
-  font-size: 35px;
-  margin-top: 15px;
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
 }
 
+h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Score Section */
 .score,
 button {
   border-radius: 5px;
 }
 
-.add-score-btn,
-#reset-btn {
-  height: 45px;
-}
-
-.score-container,
-.add-score-btn {
-  display: flex;
-}
-
 .score-container {
-  align-items: center;
-}
-
-.add-score-btn {
-  justify-content: center;
-}
-
-.container {
-  max-width: 575px;
-  margin: 80px auto;
-  background-color: rgba(27, 36, 74, 1);
-  color: rgba(154, 171, 216, 1);
-  border-radius: 10px;
-  padding: 50px 20px;
-}
-
-.score-container {
-  justify-content: space-around;
-}
-
-section {
-  width: 155px;
   display: flex;
   flex-direction: column;
+  gap: 2.5rem;
   justify-content: center;
-  align-items: center;
 }
 
 .score {
-  font-family: "Cursed Timer ULiL", sans-serif;
+  width: 155px;
   background-color: rgba(8, 0, 1, 1);
   color: rgba(249, 79, 109, 1);
-  font-size: 90px;
-  height: 120px;
-  margin: 21px 0 26px 0;
+  font-family: "Cursed Timer ULiL", monospace;
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 0.7rem 0;
+  margin: 1rem auto;
+}
+
+/* Buttons */
+.add-score-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.add-score-btn {
-  gap: 11px;
+  gap: 0.7rem;
+  flex-wrap: wrap;
 }
 
 button {
-  background-color: #1c1c1c;
+  font-family: "Cursed Timer ULiL", monospace;
+  font-size: 1rem;
   border: 1px solid rgba(154, 171, 216, 1);
   background-color: transparent;
-  color: unset;
-  width: 45px;
-  height: 100%;
-  font-size: 18px;
+  color: rgba(154, 171, 216, 1);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
+button:hover,
+button:focus {
+  background-color: rgba(154, 171, 216, 1);
+  color: rgba(27, 36, 74, 1);
+  outline: none;
+}
+
+/* Reset Button */
 #reset-btn {
   display: block;
-  margin: 0 auto;
-  margin-top: 40px;
-  padding: 7px 12px;
-  width: 70px;
+  margin: 2rem auto 0.8rem;
+  background-color: rgba(249, 79, 109, 1);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 1rem;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-@media (max-width: 450px) {
-  .container {
-    margin: 60px auto;
-    padding: 30px 15px;
-  }
+#reset-btn:hover {
+  background-color: rgb(217, 59, 89);
+}
 
+/* Winner Display */
+#winner {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: rgb(249, 202, 36);
+  text-transform: uppercase;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
   .score-container {
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: row;
+    gap: 4rem;
   }
 
   .score {
-    font-size: 55px;
-    height: 90px;
+    font-size: 4rem;
   }
 
-  section {
-    width: 100px;
+  h1 {
+    font-size: 2rem;
   }
 
-  .add-score-btn {
-    height: 35px;
-    gap: 6px;
-  }
-
-  button {
-    font-size: 16px;
-    width: 30px;
-    height: 100%;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-
-  #reset-btn {
-    width: 50px;
-    padding: 4px 7px;
-  }
-
-  #winner {
-    font-size: 25px;
+  h3 {
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 200px) {
-  .container {
-    margin: 50px auto;
-    padding: 30px 10px;
-  }
-
-   section {
-    width: 90px;
+@media (min-width: 900px) {
+  .appWrapper {
+    padding: 3rem 4rem;
   }
 
   .score {
-    font-size: 40px;
-    height: 60px;
-  }
-
-  .add-score-btn {
-    height: 25px;
-    gap: 4px;
+    font-size: 5rem;
   }
 
   button {
-    font-size: 12px;
-    width: 20px;
+    font-size: 1.1rem;
   }
 
-  h2 {
-    font-size: 24px;
+  h1 {
+    font-size: 2.2rem;
   }
 
-  #reset-btn {
-    width: 40px;
-    font-size: 12px;
-    padding: 3px 5px;
-  }
-
-  #winner {
-    font-size: 16px;
+  h3 {
+    font-size: 1.4rem;
   }
 }

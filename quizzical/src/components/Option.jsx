@@ -1,3 +1,4 @@
+import styles from "../components/Option.module.css";
 export default function Option({
   option,
   selected,
@@ -10,7 +11,7 @@ export default function Option({
 
   if (reviewMode) {
     if (option === correctAnswer) {
-      bgColor = "rgba(148, 215, 162, 1)"; 
+      bgColor = "rgba(148, 215, 162, 1)";
     } else if (userAnswer === option) {
       bgColor = "rgba(248, 188, 188, 1)";
     }
@@ -20,9 +21,10 @@ export default function Option({
 
   return (
     <button
+      className={styles.option}
       disabled={reviewMode}
       onClick={reviewMode ? undefined : () => onSelect(option)}
-      style={{ backgroundColor: bgColor }}
+      style={{ backgroundColor: bgColor}}
       dangerouslySetInnerHTML={{ __html: option }}
     />
   );

@@ -1,0 +1,98 @@
+.optionsSection,
+.resultSection {
+  display: flex;
+  gap: 13px;
+}
+
+.question {
+  width: 100%;
+  padding-block: 15px;
+  border-block-end: 0.79px solid rgba(219, 222, 240, 1);
+}
+
+.question p {
+  font-family: " Karla";
+  font-weight: 700;
+  margin-block-end: 12px;
+}
+
+.optionsSection {
+  flex-wrap: wrap;
+}
+
+/* Result */
+.resultSection {
+  margin-block-start: 20px;
+  align-items: center;
+  justify-content: end;
+}
+
+.resultSection h2 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 250px) {
+  .resultSection {
+    margin-block-start: 15px;
+  }
+
+  .resultSection h2 {
+    text-align: center;
+    font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .optionsSection {
+    flex-direction: column;
+  }
+  .resultSection {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .resultSection {
+    margin-block-start: 20px;
+    padding-inline: 10px;
+  }
+}
+
+@media (min-width: 500px) {
+  .question {
+    padding-block: 17px;
+  }
+
+  .optionsSection,
+  .resultSection {
+    gap: 15px;
+  }
+
+  .resultSection {
+    margin-block-start: 20px;
+  }
+
+  .resultSection h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .question {
+    padding-block: 20px;
+  }
+
+  .optionsSection,
+  .resultSection {
+    gap: 17px;
+  }
+
+  .resultSection {
+    margin-block-start: 30px;
+  }
+
+  .resultSection h2 {
+    font-size: 1.1rem;
+  }
+}
